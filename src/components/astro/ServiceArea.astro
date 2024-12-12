@@ -1,0 +1,33 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+const { title, description, icon } = Astro.props;
+---
+
+<div
+  class="group relative overflow-hidden rounded-2xl bg-white transition-all hover:shadow-xl"
+>
+  <div class="aspect-square w-full overflow-hidden">
+    <img
+      src={icon}
+      alt={title}
+      class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
+    </div>
+  </div>
+  <div class="absolute bottom-0 p-6 text-white">
+    <h3 class="mb-2 text-xl font-bold text-primaryC-yellow">
+      {title}
+    </h3>
+    <p
+      class="transform opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+    >
+      {description}
+    </p>
+  </div>
+</div>

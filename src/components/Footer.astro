@@ -1,0 +1,201 @@
+---
+const fecha = new Date().getFullYear();
+---
+
+<footer
+  class="bg-neutralC-white text-primaryC-black py-12 border-t border-slate-300"
+>
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-2xl font-semibold mb-4 text-primaryC-black">
+          Toman Jido-Ka Ikigai
+        </h3>
+        <p class="text-slate-500 mb-4">
+          Connecting systems, empowering businesses.
+        </p>
+        <div class="flex space-x-4">
+          <a
+            href="#"
+            class="text-primaryC-black hover:text-secondaryC-orange transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-facebook"
+            >
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="text-primaryC-black hover:text-secondaryC-orange transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-twitter"
+            >
+              <path
+                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="text-primaryC-black hover:text-secondaryC-orange transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-linkedin"
+            >
+              <path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+              ></path>
+              <rect width="4" height="12" x="2" y="9"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="text-primaryC-black hover:text-secondaryC-orange transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-instagram"
+            >
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold mb-4 text-primaryC-black">
+          Quick Links
+        </h4>
+        <ul class="space-y-2">
+          {
+            ["Services", "About Us", "Projects", "Catalog"].map((item) => (
+              <li>
+                <a
+                  href={`#${item.toLowerCase().replace(" ", "-")}`}
+                  class="text-slate-500 hover:text-secondaryC-orange transition-colors flex items-center"
+                >
+                  <span class="mr-2">•</span> {item}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold mb-4 text-primaryC-black">
+          Contact Us
+        </h4>
+        <ul class="space-y-2">
+          <li class="flex items-center text-slate-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              width="24"
+              height="24"
+              stroke-width="2"
+              class="text-primaryC-yellow m-1"
+            >
+              <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+              <path
+                d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
+              ></path>
+            </svg>
+            Agustinn Garcia #2069,de la Rosa Av Rivas Guil, Soledad de Graciano,
+            SLP
+          </li>
+          <li class="flex items-center text-slate-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              width="24"
+              height="24"
+              stroke-width="2".
+              class="text-primaryC-yellow m-1"
+            >
+              <path
+                d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+              ></path>
+            </svg>
+            +52 444 450 1346
+          </li>
+          <li class="flex items-center text-slate-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              width="24"
+              height="24"
+              stroke-width="2"
+              class="text-primaryC-yellow m-1"
+            >
+              <path
+                d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
+              ></path>
+              <path d="M3 7l9 6l9 -6"></path>
+            </svg>
+            contacto@tomanjido-kaikigai.com
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="mt-8 pt-8 border-t border-secondaryC-gray text-center text-secondaryC-gray"
+    >
+      <p>
+        &copy; {fecha} Toman Jido-Ka Ikigai. Todos los derechos reservados.
+      </p>
+    </div>
+  </div>
+</footer>

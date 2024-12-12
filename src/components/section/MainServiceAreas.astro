@@ -1,0 +1,46 @@
+---
+import ServiceArea from "../astro/ServiceArea.astro";
+interface ServiceAreaProps {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+const serviceAreas: ServiceAreaProps[] = [
+  {
+    title: "AUTOMATIZACIÓN",
+    description:
+      "Sistemas de control automático y soluciones de automatización industrial para optimizar sus procesos",
+    icon: "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733959724/imagens/servicios/segq5ddqynro0w1lrbdl.png",
+  },
+  {
+    title: "INFORMÁTICA",
+    description:
+      "Desarrollo de software, mantenimiento de sistemas y soluciones tecnológicas integrales",
+    icon: "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733959724/imagens/servicios/ovp9gbtkoyxozkynaixb.png",
+  },
+  {
+    title: "TRABAJO EN METAL",
+    description:
+      "Fabricación personalizada y trabajos especializados en estructuras metálicas",
+    icon: "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733959724/imagens/servicios/vqp0m2pxkinmuqb14n04.png",
+  },
+  {
+    title: "RED ELÉCTRICA",
+    description:
+      "Instalación y mantenimiento de sistemas eléctricos de alta calidad y eficiencia",
+    icon: "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733959725/imagens/servicios/qpvstm6wco3fojh1vmcy.png",
+  },
+];
+---
+
+<div class="w-full py-16 px-4 lg:w-10/12 m-auto bg-neutralC-white">
+  <div class="mx-auto max-w-6xl">
+    <h2 class="mb-12 text-center text-3xl font-bold text-primaryC-black">
+      Áreas de Especialización
+    </h2>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+      {serviceAreas.map((service) => <ServiceArea {...service} />)}
+    </div>
+  </div>
+</div>

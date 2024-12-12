@@ -11,6 +11,7 @@ const colors = {
   neutralC: {
     white: "#FFFFFF",
     brown: "#D2B48C",
+    lightGray: "#F5F5F5",
   },
 };
 
@@ -79,29 +80,129 @@ const valores = [
   <div class="grid md:grid-cols-2 gap-8 max-w-6xl">
     {/* Columna de Descripción */}
     <div
-      class="p-6 rounded-xl space-y-6"
+      class="p-8 rounded-2xl space-y-6 shadow-lg transition-all duration-300 hover:scale-[1.02]"
       style={{
         backgroundColor: colors.neutralC.white,
         border: `2px solid ${colors.primaryC.yellow}`,
+        borderRadius: "20px",
       }}
     >
       <h2
-        class="text-3xl font-bold mb-4"
+        class="text-4xl font-extrabold mb-6 text-center flex items-center justify-center gap-4"
         style={{ color: colors.secondaryC.orange }}
       >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
         Quiénes Somos
       </h2>
-      <p class="mb-4" style={{ color: colors.primaryC.black }}>
-        JIDO-KA Es una metodología japonesa que se podría traducir como
-        Automatización con enfoque humano, basada en la autonomía y la
-        automatización. Otros lo llaman automatización inteligente.
-      </p>
-      <p style={{ color: colors.primaryC.black }}>
-        IKIGAI El término hace referencia a nuestra razón de vivir, aquello que
-        da significado a nuestra vida, algo por lo que merece la pena vivir y
-        nos hace estar plenamente satisfechos y felices con la dirección que
-        tomamos en nuestras vidas.
-      </p>
+
+      <div class="grid md:grid-cols-2 grid-col-1 gap-6">
+        <div class="md:col-span-2">
+          <p
+            class="text-base leading-relaxed"
+            style={{ color: colors.primaryC.black }}
+          >
+            Somos un equipo de trabajo que asiste las necesidades de nuestros
+            clientes, proporcionando la tecnologia, herramientas, material,
+            asesoramiento y servicios necesarios para dar soluciones segun las
+            necesidades de nuestros clientes.
+          </p>
+        </div>
+        <div
+          class="p-6 rounded-xl space-y-4 transform transition-all duration-300 hover:scale-[1.03]"
+          style={{
+            backgroundColor: colors.neutralC.lightGray,
+            border: `1px solid ${colors.primaryC.yellow}`,
+          }}
+        >
+          <div class="flex items-center gap-3 mb-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke={colors.secondaryC.orange}
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="16"></line>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+            <h3
+              class="text-2xl font-bold"
+              style={{ color: colors.secondaryC.orange }}
+            >
+              JIDO-KA
+            </h3>
+          </div>
+          <p
+            class="text-base leading-relaxed"
+            style={{ color: colors.primaryC.black }}
+          >
+            Metodología japonesa que se traduce como <strong
+              >Automatización con enfoque humano</strong
+            >. Se basa en la autonomía y la automatización inteligente,
+            priorizando el papel fundamental de las personas en los procesos.
+          </p>
+        </div>
+
+        <div
+          class="p-6 rounded-xl space-y-4 transform transition-all duration-300 hover:scale-[1.03]"
+          style={{
+            backgroundColor: colors.neutralC.lightGray,
+            border: `1px solid ${colors.primaryC.yellow}`,
+          }}
+        >
+          <div class="flex items-center gap-3 mb-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke={colors.secondaryC.orange}
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="16"></line>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+            <h3
+              class="text-2xl font-bold"
+              style={{ color: colors.secondaryC.orange }}
+            >
+              IKIGAI
+            </h3>
+          </div>
+          <p
+            class="text-base leading-relaxed"
+            style={{ color: colors.primaryC.black }}
+          >
+            Concepto japonés que representa <strong>la razón de vivir</strong>.
+            Describe aquello que da significado a nuestra vida, motivándonos a
+            encontrar un propósito que nos haga sentir plenamente satisfechos y
+            felices.
+          </p>
+        </div>
+      </div>
     </div>
 
     {/* Columna de Valores y Misión */}
