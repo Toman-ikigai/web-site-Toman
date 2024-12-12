@@ -12,27 +12,60 @@
       alt="Company Logo"
       class="w-28 h-auto object-cover rounded-lg"
     />
-    <nav>
-      <ul class="flex space-x-4 uppercase text-sm">
+    <!-- Botón para dispositivos móviles -->
+    <button
+      id="menu-toggle"
+      class="lg:hidden text-white focus:outline-none focus:ring-2 focus:ring-secondaryC-orange"
+    >
+      <svg
+        class="w-6 h-6"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+
+    <!-- Menú de navegación -->
+    <nav
+      id="menu"
+      class="hidden absolute lg:static bg-black bg-opacity-80 lg:bg-transparent top-16 left-0 w-full lg:w-auto lg:space-x-4 uppercase text-sm lg:flex items-center text-white transition-all duration-300"
+    >
+      <ul class="flex flex-col lg:flex-row lg:items-center">
         <li>
-          <a href="#services" class="hover:text-secondaryC-orange">INICIO</a>
+          <a
+            href="#services"
+            class="block py-2 px-4 hover:text-secondaryC-orange">INICIO</a
+          >
         </li>
-        <!-- <li>
-          <a href="#projects" class="hover:text-secondaryC-orange">SERVICIOS</a>
-        </li> -->
         <li>
-          <a href="#catalog" class="hover:text-secondaryC-orange">PROYECTOS</a>
+          <a
+            href="#catalog"
+            class="block py-2 px-4 hover:text-secondaryC-orange">PROYECTOS</a
+          >
         </li>
         <li>
-          <a href="#contact" class="hover:text-secondaryC-orange">CATALOGO</a>
+          <a
+            href="#contact"
+            class="block py-2 px-4 hover:text-secondaryC-orange">CATÁLOGO</a
+          >
         </li>
         <li>
-          <a href="#about" class="hover:text-secondaryC-orange"
+          <a href="#about" class="block py-2 px-4 hover:text-secondaryC-orange"
             >SOBRE NOSOTROS</a
           >
         </li>
         <li>
-          <a href="#contact" class="hover:text-secondaryC-orange">CONTACTO</a>
+          <a
+            href="#contact"
+            class="block py-2 px-4 hover:text-secondaryC-orange">CONTACTO</a
+          >
         </li>
       </ul>
     </nav>
@@ -42,7 +75,10 @@
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const header = document.getElementById("main-header") as HTMLElement;
+    const menuToggle = document.getElementById("menu-toggle") as HTMLElement;
+    const menu = document.getElementById("menu") as HTMLElement;
 
+    // Cambiar el fondo del header al hacer scroll
     window.addEventListener("scroll", () => {
       if (window.scrollY > window.innerHeight) {
         header.classList.remove("bg-transparent");
@@ -51,6 +87,11 @@
         header.classList.remove("bg-black", "bg-opacity-50");
         header.classList.add("bg-transparent", "text-white");
       }
+    });
+
+    // Mostrar/ocultar menú en móviles
+    menuToggle.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
     });
   });
 </script>

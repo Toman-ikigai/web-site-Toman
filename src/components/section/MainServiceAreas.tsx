@@ -79,7 +79,7 @@ const ServiceArea: React.FC<ServiceAreaProps> = ({
 export const MainServiceAreas: React.FC = () => {
   return (
     <div
-      className="w-full py-16 px-4 sm:w-10/12 m-auto"
+      className="w-full py-16 px-4 lg:w-10/12 m-auto"
       style={{ backgroundColor: colors.neutralC.white }}
     >
       <div className="mx-auto max-w-6xl">

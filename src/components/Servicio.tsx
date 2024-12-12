@@ -104,7 +104,7 @@ const ReviewCard = ({
 
 export function Servicio() {
   return (
-    <div className="relative flex sm:w-10/12 m-auto h-[400px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
+    <div className="relative flex lg:w-10/12 m-auto h-[400px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />

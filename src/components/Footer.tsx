@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-2xl font-semibold mb-4 text-primaryC-black">
-              Integrator Co.
+              Toman Jido-Ka Ikigai
             </h3>
             <p className="text-slate-500 mb-4">
               Connecting systems, empowering businesses.
@@ -119,7 +119,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="flex items-center text-slate-500">
                 <MapPin size={18} className="mr-2 text-primaryC-yellow" />
-                123 Integration Street, Tech City, TC 12345
+                Toman Jido-Ka Ikigai, 1234 Main St, City, Country
               </li>
               <li className="flex items-center text-slate-500">
                 <Phone size={18} className="mr-2 text-primaryC-yellow" />
@@ -134,7 +134,7 @@ export default function Footer() {
         </div>
         <div className="mt-8 pt-8 border-t border-secondaryC-gray text-center text-secondaryC-gray">
           <p>
-            &copy; {new Date().getFullYear()} Integrator Co. All rights
+            &copy; {new Date().getFullYear()} Toman Jido-Ka Ikigai. All rights
             reserved.
           </p>
         </div>

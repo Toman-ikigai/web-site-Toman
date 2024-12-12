@@ -45,13 +45,13 @@ export default function Carousel() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-    }, 5000); // Change slide every 5 seconds
+    }, 5000);
 
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <div className="relative w-full sm:h-screen h-[70vh]">
+    <div className="relative w-full lg:h-screen h-[70vh]">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -66,11 +66,11 @@ export default function Carousel() {
           />
           <div className="absolute inset-0 bg-black bg-opacity-50 flex gap-3 flex-col justify-center items-center text-white p-4">
             <h2 className="text-2xl font-bold text-center">{slide.title}</h2>
-            <h2 className="text-4xl font-bold text-center">
+            <h2 className="md:text-4xl text-xl font-bold text-center">
               <GradualSpacingDemo text={slide.subtitle} />
               {/* {slide.title} */}
             </h2>
-            <div className=" w-5/12 text-center flex flex-wrap">
+            <div className="lg:w-5/12 md:text-2xl lg:text-xl w-10/12 text-center flex flex-wrap">
               {slide.description}
             </div>
 

@@ -4,7 +4,7 @@ import { Wrench, Rocket, Bug } from "lucide-react";
 interface ServiceCardProps {
   icon: any;
   title: string;
-  description?: string; // Making description optional
+  description?: string;
 }
 
 interface Service {

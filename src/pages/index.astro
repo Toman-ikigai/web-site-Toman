@@ -6,26 +6,30 @@ import Carousel from "../components/Carousel";
 import ServicesSection from "@/components/section/ServicesSection";
 import { Servicio } from "@/components/Servicio";
 import MainServiceAreas from "@/components/section/MainServiceAreas";
-import AboutUs from "../components/AboutUs.astro";
-import Projects from "../components/Projects.astro";
 import Catalog from "../components/Catalog.astro";
 import LatestFinishedProjects from "@/components/section/LatestFinishedProjects";
+import ProjectShowcase from "@/components/section/ProjectShowcase";
+import AboutUsSection from "@/components/section/AboutUsSection.astro";
 import MissionandVision from "@/components/section/MissionandVision.astro";
+import Programas from "@/components/section/Programas.astro";
+import ContactSection from "@/components/section/ContactSection.astro";
 import Footer from "@/components/Footer";
 ---
 
-<Layout title="Integrator Company">
+<Layout title="TOMAN JIDO-KA IKIGAI">
   <Header />
   <main>
     <Carousel client:load />
     <ServicesSection />
     <Servicio client:load />
     <MainServiceAreas />
-    <!-- <AboutUs /> -->
-    <!-- <Projects /> -->
     <LatestFinishedProjects client:visible />
     <Catalog />
+    <ProjectShowcase />
+    <AboutUsSection />
     <MissionandVision />
+    <Programas />
+    <ContactSection />
   </main>
   <Footer />
 </Layout>
