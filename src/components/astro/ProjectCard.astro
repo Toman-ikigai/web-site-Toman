@@ -8,20 +8,19 @@ const { title, image, description } = Astro.props;
 ---
 
 <div
-  class="relative w-full max-w-sm mx-auto transform transition-all duration-300 hover:scale-105 hover:shadow-lg rounded-xl overflow-hidden bg-neutralC-white shadow-md"
+  class="relative w-full max-w-sm mx-auto transform transition-all duration-300 hover:scale-105 hover:shadow-lg rounded-xl overflow-hidden bg-primaryC-black shadow-md"
 >
   {/* Image Section */}
   <div class="relative w-full h-48 overflow-hidden bg-primaryC-yellow">
     <img
       src={image || "/api/placeholder/400/250"}
       alt={title}
-      class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 hover:brightness-70 img__project"
+      class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 hover:brightness-90 img__project"
     />
 
     {/* Hover Overlay */}
-
     <div
-      class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 transition-opacity duration-300 div_overlap"
+      class="absolute inset-0 flex items-center justify-center bg-primaryC-black bg-opacity-70 transition-opacity duration-300 div_overlap"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +32,7 @@ const { title, image, description } = Astro.props;
         width="48"
         height="48"
         stroke-width="2"
-        class="opacity-80 hover:opacity-100 cursor-pointer text-neutralC-white"
+        class="opacity-80 hover:opacity-100 cursor-pointer text-primaryC-yellow"
       >
         <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
         <path
@@ -44,11 +43,11 @@ const { title, image, description } = Astro.props;
   </div>
 
   {/* Content Section */}
-  <div class="p-4 text-primaryC-black bg-neutral-white">
-    <h3 class="text-xl font-bold mb-2 truncate text-primary-orange">
+  <div class="p-4 text-neutralC-white bg-primaryC-black">
+    <h3 class="text-xl font-bold mb-2 truncate text-secondaryC-orange">
       {title}
     </h3>
-    <p class="text-sm line-clamp-3 text-primary-black">
+    <p class="text-sm line-clamp-3 text-secondaryC-gray">
       {description}
     </p>
   </div>
@@ -59,7 +58,7 @@ const { title, image, description } = Astro.props;
     opacity: 0;
   }
 
-  .img__project:hover + div_overlap {
+  .img__project:hover ~ .div_overlap {
     opacity: 1;
   }
 </style>

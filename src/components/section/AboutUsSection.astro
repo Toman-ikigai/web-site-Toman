@@ -5,57 +5,57 @@ const colors = {
     black: "#2C2C2C",
   },
   secondaryC: {
-    gray: "#E0E0E0",
+    gray: "#4B4B4B",
     orange: "#FFA500",
   },
   neutralC: {
     white: "#FFFFFF",
     brown: "#D2B48C",
-    lightGray: "#F5F5F5",
+    lightGray: "#757575",
   },
 };
 
 const valores = [
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" width="24" height="24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" class="text-secondaryC-orange">
-  <path d="M17.286 21.09q -1.69 .001 -5.288 -2.615q -3.596 2.617 -5.288 2.616q -2.726 0 -.495 -6.8q -9.389 -6.775 2.135 -6.775h.076q 1.785 -5.516 3.574 -5.516q 1.785 0 3.574 5.516h.076q 11.525 0 2.133 6.774q 2.23 6.802 -.497 6.8"></path>
-</svg>`,
+      <path d="M17.286 21.09q -1.69 .001 -5.288 -2.615q -3.596 2.617 -5.288 2.616q -2.726 0 -.495 -6.8q -9.389 -6.775 2.135 -6.775h.076q 1.785 -5.516 3.574 -5.516q 1.785 0 3.574 5.516h.076q11.525 0 2.133 6.774q 2.23 6.802 -.497 6.8"></path>
+    </svg>`,
     label: "Innovación",
   },
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" width="24" height="24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" class="text-secondaryC-orange">
-  <path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3"></path>
-  <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3"></path>
-  <path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-</svg>`,
+      <path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3"></path>
+      <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3"></path>
+      <path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+    </svg>`,
     label: "Excelencia",
   },
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2" class="text-secondaryC-orange">
-  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
-  <path d="M3.6 9h16.8"></path>
-  <path d="M3.6 15h16.8"></path>
-  <path d="M11.5 3a17 17 0 0 0 0 18"></path>
-  <path d="M12.5 3a17 17 0 0 1 0 18"></path>
-</svg>`,
+      <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+      <path d="M3.6 9h16.8"></path>
+      <path d="M3.6 15h16.8"></path>
+      <path d="M11.5 3a17 17 0 0 0 0 18"></path>
+      <path d="M12.5 3a17 17 0 0 1 0 18"></path>
+    </svg>`,
     label: "Integridad",
   },
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2" class="text-secondaryC-orange">
-  <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-  <path d="M12 12m-5 0a5 5 0 1 0 10 0a5 5 0 1 0 -10 0"></path>
-  <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-</svg>`,
+      <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+      <path d="M12 12m-5 0a5 5 0 1 0 10 0a5 5 0 1 0 -10 0"></path>
+      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+    </svg>`,
     label: "Compromiso",
   },
 ];
 ---
 
 <div
-id="about"
+  id="about"
   class="flex flex-col items-center justify-center p-6"
   style={{
-    backgroundColor: colors.neutralC.white,
+    backgroundColor: colors.primaryC.black,
   }}
 >
   {/* Spot o Mensaje Principal */}
@@ -67,12 +67,13 @@ id="about"
   >
     <h1
       class="md:text-4xl text-xl font-bold mb-4"
-      style={{ color: colors.secondaryC.orange }}
+      style={{ color: colors.primaryC.yellow }}
     >
       JUNTOS, CREAMOS SOLUCIONES SOSTENIBLES
     </h1>
-    <p class="md:text-xl text-lg" style={{ color: colors.primaryC.black }}>
-      somos un equipo dedicado a brindar soluciones en automatización, sistemas informáticos e implementación de industria 4.0 .
+    <p class="md:text-xl text-lg" style={{ color: colors.neutralC.white }}>
+      Somos un equipo dedicado a brindar soluciones en automatización, sistemas
+      informáticos e implementación de industria 4.0.
     </p>
   </div>
 
@@ -82,14 +83,14 @@ id="about"
     <div
       class="p-8 rounded-2xl space-y-6 shadow-lg transition-all duration-300 hover:scale-[1.02]"
       style={{
-        backgroundColor: colors.neutralC.white,
+        backgroundColor: colors.primaryC.black,
         border: `2px solid ${colors.primaryC.yellow}`,
         borderRadius: "20px",
       }}
     >
       <h2
         class="text-4xl font-extrabold mb-6 text-center flex items-center justify-center gap-4"
-        style={{ color: colors.secondaryC.orange }}
+        style={{ color: colors.primaryC.yellow }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -109,15 +110,15 @@ id="about"
         Quiénes Somos
       </h2>
 
-      <div class="grid md:grid-cols-2 grid-col-1 gap-6">
+      <div class="lg:grid lg:grid-cols-2 grid-col-1 gap-6 flex flex-col">
         <div class="md:col-span-2">
           <p
             class="text-base leading-relaxed"
-            style={{ color: colors.primaryC.black }}
+            style={{ color: colors.neutralC.white }}
           >
             Somos un equipo de trabajo que asiste las necesidades de nuestros
-            clientes, proporcionando la tecnologia, herramientas, material,
-            asesoramiento y servicios necesarios para dar soluciones segun las
+            clientes, proporcionando la tecnología, herramientas, material,
+            asesoramiento y servicios necesarios para dar soluciones según las
             necesidades de nuestros clientes.
           </p>
         </div>
@@ -146,14 +147,14 @@ id="about"
             </svg>
             <h3
               class="text-2xl font-bold"
-              style={{ color: colors.secondaryC.orange }}
+              style={{ color: colors.primaryC.yellow }}
             >
               JIDO-KA
             </h3>
           </div>
           <p
             class="text-base leading-relaxed"
-            style={{ color: colors.primaryC.black }}
+            style={{ color: colors.neutralC.white }}
           >
             Metodología japonesa que se traduce como <strong
               >Automatización con enfoque humano</strong
@@ -187,14 +188,14 @@ id="about"
             </svg>
             <h3
               class="text-2xl font-bold"
-              style={{ color: colors.secondaryC.orange }}
+              style={{ color: colors.primaryC.yellow }}
             >
               IKIGAI
             </h3>
           </div>
           <p
             class="text-base leading-relaxed"
-            style={{ color: colors.primaryC.black }}
+            style={{ color: colors.neutralC.white }}
           >
             Concepto japonés que representa <strong>la razón de vivir</strong>.
             Describe aquello que da significado a nuestra vida, motivándonos a
@@ -224,21 +225,20 @@ id="about"
           width="72"
           height="72"
           stroke-width="2"
-          class="text-secondaryC-orange"
+          class="text-primaryC-yellow"
         >
           <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
           <path d="M12 12m-5 0a5 5 0 1 0 10 0a5 5 0 1 0 -10 0"></path>
           <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
         </svg>
-        <!-- <Target size={48} style={{ color: colors.secondaryC.orange }} /> -->
         <div>
           <h3
             class="text-2xl font-bold mb-2"
-            style={{ color: colors.primaryC.black }}
+            style={{ color: colors.neutralC.white }}
           >
             Nuestra Misión
           </h3>
-          <p style={{ color: colors.primaryC.black }}>
+          <p style={{ color: colors.neutralC.white }}>
             Asistir las necesidades de nuestros clientes, proporcionando la
             tecnología, herramientas, asesoramiento y servicios necesarios para
             dar soluciones integrales de ingeniería.
@@ -263,7 +263,7 @@ id="about"
           width="72"
           height="72"
           stroke-width="2"
-          class="text-secondaryC-orange"
+          class="text-primaryC-yellow"
         >
           <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
           <path d="M3.6 9h16.8"></path>
@@ -271,15 +271,14 @@ id="about"
           <path d="M11.5 3a17 17 0 0 0 0 18"></path>
           <path d="M12.5 3a17 17 0 0 1 0 18"></path>
         </svg>
-        <!-- <Globe size={48} style={{ color: colors.secondaryC.orange }} /> -->
         <div>
           <h3
             class="text-2xl font-bold mb-2"
-            style={{ color: colors.primaryC.black }}
+            style={{ color: colors.neutralC.white }}
           >
             Nuestra Visión
           </h3>
-          <p style={{ color: colors.primaryC.black }}>
+          <p style={{ color: colors.neutralC.white }}>
             Ser reconocidos como una empresa comprometida en brindar soluciones
             integrales de automatización en procesos. Ofreciendo calidad, valor,
             eficiencia y eficacia a nuestros proyectos.
@@ -296,7 +295,7 @@ id="about"
       >
         <h3
           class="text-2xl font-bold mb-4 text-center"
-          style={{ color: colors.primaryC.black }}
+          style={{ color: colors.neutralC.white }}
         >
           Nuestros Valores
         </h3>
@@ -306,8 +305,8 @@ id="about"
               <div
                 class="flex items-center space-x-2 p-2 rounded"
                 style={{
-                  backgroundColor: colors.neutralC.white,
-                  color: colors.primaryC.black,
+                  backgroundColor: colors.primaryC.black,
+                  color: colors.primaryC.yellow,
                 }}
               >
                 <Fragment set:html={valor.icon} />

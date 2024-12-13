@@ -32,30 +32,12 @@ const reviews = [
     body: "Servicio técnico especializado en reparaciones generales. Atención rápida y eficiente para emergencias.",
     img: "https://avatar.vercel.sh/repairs",
   },
-  // {
-  //   name: "Plomería",
-  //   username: "@plumbing_pro",
-  //   body: "Servicios de plomería residencial y comercial. Instalaciones, reparaciones y mantenimiento de sistemas hidráulicos.",
-  //   img: "https://avatar.vercel.sh/plumbing",
-  // },
   {
     name: "Sistemas de Seguridad",
     username: "@security_systems",
     body: "Instalación de cámaras de seguridad, alarmas y control de acceso. Protección integral para su hogar o negocio.",
     img: "https://avatar.vercel.sh/security",
   },
-  // {
-  //   name: "Carpintería",
-  //   username: "@woodwork_expert",
-  //   body: "Trabajos de carpintería fina, muebles a medida y restauraciones. Calidad y precisión en cada proyecto.",
-  //   img: "https://avatar.vercel.sh/carpentry",
-  // },
-  // {
-  //   name: "Herrería",
-  //   username: "@metal_works",
-  //   body: "Fabricación y reparación de estructuras metálicas. Trabajos de soldadura y herrería artística.",
-  //   img: "https://avatar.vercel.sh/metalwork",
-  // },
   {
     name: "Reparación de Equipos",
     username: "@tech_repair",
@@ -82,29 +64,32 @@ const ReviewCard = ({
     <figure
       className={cn(
         "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
-        // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+        // dark styles optimized for black background
+        "border-secondaryC-gray/20 bg-primaryC-black/30 hover:bg-primaryC-black/40",
+        "text-neutralC-white"
       )}
     >
       <div className="flex flex-row items-center gap-2">
         <img className="rounded-full" width="32" height="32" alt="" src={img} />
         <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
+          <figcaption className="text-sm font-medium text-primaryC-yellow">
             {name}
           </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{username}</p>
+          <p className="text-xs font-medium text-secondaryC-gray/80">
+            {username}
+          </p>
         </div>
       </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
+      <blockquote className="mt-2 text-sm text-secondaryC-gray">
+        {body}
+      </blockquote>
     </figure>
   );
 };
 
 export function Servicio() {
   return (
-    <div className="relative flex lg:w-10/12 m-auto h-[400px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
+    <div className="relative flex lg:w-10/12 m-auto h-[400px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.username} {...review} />
@@ -115,8 +100,8 @@ export function Servicio() {
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#2C2C2C]"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-[#2C2C2C]"></div>
     </div>
   );
 }

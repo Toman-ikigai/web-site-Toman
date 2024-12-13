@@ -51,7 +51,7 @@ export default function Carousel() {
   }, []);
 
   return (
-    <div id="home" className="relative w-full lg:h-screen h-[70vh]">
+    <div id="home" className="relative w-full lg:h-screen md:h-[60vh] h-[85vh]">
       {slides.map((slide, index) => (
         <div
           key={index}
