@@ -1,0 +1,39 @@
+---
+import { getContentJsonLang } from "@/services/langJson";
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const { items, title, content } = getContentJsonLang("benefitsData", lang);
+---
+
+<div class="py-8 rounded-lg text-neutralC-white lg:w-10/12 w-11/12 m-auto">
+  <div class="text-center mb-8">
+    <h2 class="text-3xl font-bold mb-4 text-primaryC-yellow">
+      {title}
+    </h2>
+    <blockquote class=" lg:w-9/12 w-10/12 m-auto">
+      <p class="text-lg mb-6 text-secondaryC-gray">
+        {content}
+      </p>
+    </blockquote>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-6">
+    {
+      items.map((benefit) => (
+        <div class="p-6 rounded-lg transition-transform transform hover:scale-105 border-2 border-secondaryC-orange bg-neutralC-brown">
+          <div class="flex items-center mb-4">
+            <Fragment set:html={benefit.icon} />
+            <h3 class="ml-4 text-xl font-semibold text-primaryC-black">
+              {benefit.title}
+            </h3>
+          </div>
+          <p class="text-md text-primaryC-black">{benefit.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</div>

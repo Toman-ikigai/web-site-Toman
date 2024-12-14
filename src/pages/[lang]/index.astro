@@ -6,6 +6,7 @@ import Carousel from "@/components/Carousel";
 import ServicesSection from "@/components/section/ServicesSection.astro";
 import { Servicio } from "@/components/Servicio";
 import MainServiceAreas from "@/components/section/MainServiceAreas.astro";
+import MESBenefitsSection from "@/components/section/MESBenefitsSection.astro";
 import Catalog from "@/components/Catalog.astro";
 import LatestFinishedProjects from "@/components/section/LatestFinishedProjects";
 import ProjectShowcase from "@/components/section/ProjectShowcase.astro";
@@ -32,6 +33,7 @@ const lang = langParam || (navigator.language.startsWith("es") ? "es" : "en");
     <Carousel client:load lang={lang} />
     <ServicesSection lang={lang} />
     <Servicio client:load lang={lang} />
+    <MESBenefitsSection lang={lang} />
     <MainServiceAreas lang={lang} />
     <LatestFinishedProjects client:visible />
     <Catalog lang={lang} />
