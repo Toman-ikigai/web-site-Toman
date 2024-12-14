@@ -1,5 +1,11 @@
 ---
+import { getContentJsonLang } from "@/services/langJson";
+interface Props {
+  lang: string;
+}
+const { lang } = Astro.props;
 const fecha = new Date().getFullYear();
+const { items } = getContentJsonLang("header", lang);
 ---
 
 <footer
@@ -12,7 +18,11 @@ const fecha = new Date().getFullYear();
           Toman Jido-Ka Ikigai
         </h3>
         <p class="text-secondaryC-gray mb-4">
-          THE ENGINEERING SHOULD BE AN ART.
+          {
+            lang === "es"
+              ? "LA INGENIERÍA DEBE SER UN ARTE."
+              : "ENGINEERING SHOULD BE AN ART."
+          }
         </p>
         <div class="flex space-x-4">
           <a
@@ -26,17 +36,17 @@ const fecha = new Date().getFullYear();
       </div>
       <div>
         <h4 class="text-xl font-semibold mb-4 text-primaryC-yellow">
-          Quick Links
+          {lang === "es" ? "Enlaces Rápidos" : "Quick Links"}
         </h4>
         <ul class="space-y-2">
           {
-            ["Services", "About Us", "Projects", "Catalog"].map((item) => (
+            items.map((item) => (
               <li>
                 <a
-                  href={`#${item.toLowerCase().replace(" ", "-")}`}
+                  href={`#${item.url}`}
                   class="text-secondaryC-gray hover:text-secondaryC-orange transition-colors flex items-center"
                 >
-                  <span class="mr-2">•</span> {item}
+                  <span class="mr-2">•</span> {item.name}
                 </a>
               </li>
             ))
@@ -45,12 +55,12 @@ const fecha = new Date().getFullYear();
       </div>
       <div>
         <h4 class="text-xl font-semibold mb-4 text-primaryC-yellow">
-          Contact Us
+          {lang === "es" ? "Contáctanos" : "Contact Us"}
         </h4>
         <ul class="space-y-2">
           <li class="flex items-center text-secondaryC-gray">
             <!-- SVG Icon -->
-            Agustinn Garcia #2069, de la Rosa Av Rivas Guil, Soledad de Graciano,
+            Agustin Garcia #2069, de la Rosa Av Rivas Guil, Soledad de Graciano,
             SLP
           </li>
           <li class="flex items-center text-secondaryC-gray">
@@ -68,7 +78,12 @@ const fecha = new Date().getFullYear();
       class="mt-8 pt-8 border-t border-secondaryC-gray text-center text-secondaryC-gray"
     >
       <p>
-        &copy; {fecha} Toman Jido-Ka Ikigai. Todos los derechos reservados.
+        {}
+        &copy; {fecha} Toman Jido-Ka Ikigai.{
+          lang === "es"
+            ? "Todos los derechos reservados."
+            : "All rights reserved."
+        }
       </p>
     </div>
   </div>

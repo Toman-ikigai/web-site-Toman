@@ -1,31 +1,30 @@
 ---
+import { getContentJsonLang } from "@/services/langJson";
+interface Props {
+  lang: string;
+}
 
+const { lang } = Astro.props;
+const data = getContentJsonLang("programas", lang);
 ---
 
 <section class="py-10 text-white">
   <div class="container mx-auto max-w-4xl px-4">
     <div class="text-center">
       <h2 class="text-4xl font-bold mb-6 relative inline-block text-[#FFD966]">
-        ¿Quieres liberar tu imaginación y creatividad?
+        {data.title}
         <span class="absolute -bottom-2 left-0 w-full h-1 bg-[#FFA500] rounded"
         ></span>
       </h2>
 
       <div class="space-y-4 max-w-xl mx-auto mb-8">
-        <p class="text-lg font-medium leading-relaxed text-[#E0E0E0]">
-          Únete a nuestro equipo para abrir nuevos aprendizajes y posibilidades,
-          aprovechando tu potencial.
-        </p>
-
-        <p class="text-lg font-medium leading-relaxed text-[#E0E0E0]">
-          Toman Jidoka Ikigai está buscando jóvenes con ganas de trabajar para
-          desempeñarse de forma profesional en nuestra empresa.
-        </p>
-
-        <p class="text-lg font-medium leading-relaxed text-[#E0E0E0]">
-          Así que si estás inscrito en el programa "Jóvenes Construyendo el
-          Futuro" postúlate a alguno de nuestros planes.
-        </p>
+        {
+          data.content.map((item) => (
+            <p class="text-lg font-medium leading-relaxed text-[#E0E0E0]">
+              {item}
+            </p>
+          ))
+        }
       </div>
 
       <div class="flex justify-center">

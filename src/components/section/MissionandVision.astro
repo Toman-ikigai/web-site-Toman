@@ -1,5 +1,11 @@
 ---
+import { getContentJsonLang } from "@/services/langJson";
+interface Props {
+  lang: string;
+}
 
+const { lang } = Astro.props;
+const data = getContentJsonLang("missionandVision", lang);
 ---
 
 <section
@@ -9,20 +15,17 @@
     <h2
       class="text-primaryC-yellow text-3xl md:text-4xl font-extrabold tracking-wide mb-6"
     >
-      Nuestro Compromiso con la Excelencia
+      {data.title}
     </h2>
     <p
       class="text-secondaryC-gray text-lg md:text-xl leading-relaxed mb-8 font-light"
     >
-      Hagamos posibles sus objetivos mediante innovación colaborativa. Las
-      grandes ideas no pueden traerse al mundo real sin la energía colectiva y
-      el conocimiento de un gran equipo.
+      {data.content[0]}
     </p>
     <p
       class="text-secondaryC-orange text-lg md:text-xl leading-relaxed uppercase font-medium"
     >
-      En el fondo, la ingeniería consiste en utilizar la ciencia para encontrar
-      soluciones prácticas y creativas. Es una profesión noble.
+      {data.content[1]}
     </p>
   </div>
 </section>

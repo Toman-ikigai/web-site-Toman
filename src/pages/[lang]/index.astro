@@ -1,0 +1,45 @@
+---
+import "@/styles/globals.css";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Carousel from "@/components/Carousel";
+import ServicesSection from "@/components/section/ServicesSection.astro";
+import { Servicio } from "@/components/Servicio";
+import MainServiceAreas from "@/components/section/MainServiceAreas.astro";
+import Catalog from "@/components/Catalog.astro";
+import LatestFinishedProjects from "@/components/section/LatestFinishedProjects";
+import ProjectShowcase from "@/components/section/ProjectShowcase.astro";
+import AboutUsSection from "@/components/section/AboutUsSection.astro";
+import MissionandVision from "@/components/section/MissionandVision.astro";
+import Programas from "@/components/section/Programas.astro";
+import ContactSection from "@/components/section/ContactSection.astro";
+import Footer from "@/components/Footer.astro";
+
+const langParam = Astro.params.lang;
+const validLangs = ["es", "en"];
+if (langParam && !validLangs.includes(langParam)) {
+  const lang = navigator.language.startsWith("es") ? "es" : "en";
+  const currentUrl = new URL(Astro.request.url);
+  currentUrl.pathname = `/${lang}`;
+  return Astro.redirect(currentUrl.toString());
+}
+const lang = langParam || (navigator.language.startsWith("es") ? "es" : "en");
+---
+
+<Layout title="TOMAN JIDO-KA IKIGAI">
+  <Header lang={lang} />
+  <main>
+    <Carousel client:load lang={lang} />
+    <ServicesSection lang={lang} />
+    <Servicio client:load lang={lang} />
+    <MainServiceAreas lang={lang} />
+    <LatestFinishedProjects client:visible />
+    <Catalog lang={lang} />
+    <ProjectShowcase lang={lang} />
+    <AboutUsSection lang={lang} />
+    <MissionandVision lang={lang} />
+    <Programas lang={lang} />
+    <ContactSection lang={lang} />
+  </main>
+  <Footer lang={lang} />
+</Layout>

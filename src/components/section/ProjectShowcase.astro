@@ -1,40 +1,24 @@
 ---
 import ProjectCard from "../astro/ProjectCard.astro";
-const projects = [
-  {
-    title: "MONITOREO ENERGETICO",
-    image:
-      "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733960985/imagens/ooslmos6jf10frvcznuu.jpg",
-    description:
-      "Un sistema inteligente de gestión de energía, fácil de instalar y efectivo, que proporciona datos sobre tu consumo energético.",
-  },
-  {
-    title: "MANUFACTURING EXECUTION SYSTEM",
-    image:
-      "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733960985/imagens/vhld32il83d6nypf5tcg.jpg",
-    description:
-      "Permite monitorizar, controlar y registrar las operaciones del proceso productivo en tiempo real.",
-  },
-  {
-    title: "BALANCEO DE CARGAS",
-    image:
-      "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733960985/imagens/medjsuumj86ydcv86mna.jpg",
-    description:
-      "Gabinete de control que permite balancear las cargas eléctricas para no sobrecargar lineas de alimentación de los equipos.",
-  },
-];
+import { getContentJsonLang } from "@/services/langJson";
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const { items } = getContentJsonLang("projects", lang);
 ---
 
 <div class="p-6 flex flex-col items-center justify-center">
   <h2 class="text-3xl font-bold mb-8 text-center text-secondaryC-orange">
-    Nuestros Proyectos
+    {lang === "es" ? "Nuestros Proyectos" : "Our Projects"}
   </h2>
 
   <div
     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl"
   >
     {
-      projects.map((project) => (
+      items.map((project) => (
         <ProjectCard
           title={project.title}
           image={project.image}

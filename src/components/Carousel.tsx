@@ -1,50 +1,14 @@
 import { useState, useEffect } from "react";
 import { GradualSpacingDemo } from "./GradualSpacingDemo";
+import { getContentJsonLang } from "@/services/langJson";
 
-interface SlideData {
-  image: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  buttonText: string;
-}
-
-const slides: SlideData[] = [
-  {
-    image:
-      "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733960985/imagens/ooslmos6jf10frvcznuu.jpg",
-    title: "SISTEMAS MES",
-    subtitle: "GABINETE DE COMUNICACIÓN",
-    description:
-      "Esta diseñado para desplegar rapidamente una red Ethernet entre lienas de produccion y la planta.",
-    buttonText: "MAS INFORMACION",
-  },
-  {
-    image:
-      "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733960985/imagens/vhld32il83d6nypf5tcg.jpg",
-    title: "INOVACIONES TI",
-    subtitle: "SERVICIOS DE INFORMÁTICA",
-    description:
-      "Servicios y soluciones relacionadas con las gestion, el soporte y la implementacion de tecnologias de la informacion en una organizacion.",
-    buttonText: "MAS INFORMACION",
-  },
-  {
-    image:
-      "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733960985/imagens/medjsuumj86ydcv86mna.jpg",
-    title: "SUMINISTRO",
-    subtitle: "DISTRIBUCION DE MATERIALES",
-    description:
-      "Involucra la logistica, el transporte, el almacenamiento y la supervision de los materiales a lo largo de toda la cadena de suministro.",
-    buttonText: "MAS INFORMACION",
-  },
-];
-
-export default function Carousel() {
+export default function Carousel({ lang }: { lang: string }) {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = getContentJsonLang("slideData", lang);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.items.length);
     }, 5000);
 
     return () => clearInterval(timer);
@@ -52,7 +16,7 @@ export default function Carousel() {
 
   return (
     <div id="home" className="relative w-full lg:h-screen md:h-[60vh] h-[85vh]">
-      {slides.map((slide, index) => (
+      {slides.items.map((slide, index) => (
         <div
           key={index}
           className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out ${

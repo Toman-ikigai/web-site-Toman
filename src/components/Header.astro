@@ -1,5 +1,13 @@
 ---
+import { getContentJsonLang } from "@/services/langJson";
 
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const langData = getContentJsonLang("header", lang);
+const toggleLang = lang === "es" ? "en" : "es";
 ---
 
 <header
@@ -36,33 +44,25 @@
       class="hidden absolute lg:static bg-black bg-opacity-80 lg:bg-transparent top-16 left-0 w-full lg:w-auto lg:space-x-6 uppercase text-sm lg:flex items-center text-white transition-all duration-300"
     >
       <ul class="flex flex-col lg:flex-row lg:items-center">
+        {
+          langData.items.map((item) => (
+            <li>
+              <a
+                href={`#${item.url}`}
+                class="block py-2 px-4 hover:text-secondaryC-orange transition-colors"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
         <li>
           <a
-            href="#home"
+            href={`/${toggleLang}`}
             class="block py-2 px-4 hover:text-secondaryC-orange transition-colors"
-            >INICIO</a
           >
-        </li>
-        <li>
-          <a
-            href="#catalago"
-            class="block py-2 px-4 hover:text-secondaryC-orange transition-colors"
-            >CATÁLOGO</a
-          >
-        </li>
-        <li>
-          <a
-            href="#about"
-            class="block py-2 px-4 hover:text-secondaryC-orange transition-colors"
-            >SOBRE NOSOTROS</a
-          >
-        </li>
-        <li>
-          <a
-            href="#contacto"
-            class="block py-2 px-4 hover:text-secondaryC-orange transition-colors"
-            >CONTACTO</a
-          >
+            {toggleLang.toUpperCase()}
+          </a>
         </li>
       </ul>
     </nav>
@@ -70,6 +70,7 @@
 </header>
 
 <script>
+  // El script permanece igual
   document.addEventListener("DOMContentLoaded", () => {
     const header = document.getElementById("main-header") as HTMLElement;
     const menuToggle = document.getElementById("menu-toggle") as HTMLElement;

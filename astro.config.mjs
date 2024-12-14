@@ -9,6 +9,17 @@ import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
+  output: "server",
+  redirects: {
+    "/": "/es",
+  },
+  // i18n:{
+  //   defaultLocale: "es",
+  //   locales: ["es", "en"],
+  //   routing:{
+  //     prefixDefaultLocale: true,
+  //   }
+  // },
   integrations: [
     tailwind({
       applyBaseStyles: false,

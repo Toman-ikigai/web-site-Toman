@@ -6,6 +6,10 @@ interface SocialLink {
   color: string;
 }
 
+interface Props {
+  lang: string;
+}
+
 const colors = {
   primaryC: {
     yellow: "#FFD966",
@@ -20,6 +24,8 @@ const colors = {
     brown: "#D2B48C",
   },
 };
+
+const { lang } = Astro.props;
 
 const socialLinks: SocialLink[] = [
   {
@@ -79,7 +85,7 @@ const socialLinks: SocialLink[] = [
         class="text-3xl font-bold mb-6 text-center"
         style={`color: ${colors.primaryC.yellow}`}
       >
-        Nuestras Redes
+        {lang === "es" ? "Nuestras Redes" : "Our Networks"}
       </h2>
 
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -89,8 +95,8 @@ const socialLinks: SocialLink[] = [
               href={social.link}
               target="_blank"
               rel="noopener noreferrer"
-              class="flex flex-col items-center justify-center p-4 rounded-lg transform transition duration-300 hover:scale-110 hover:shadow-lg"
-              style={`background-color: ${colors.secondaryC.gray}; color: ${social.color};`}
+              class="flex flex-col items-center justify-center p-4 rounded-lg transform transition duration-300 hover:scale-110 hover:shadow-lg bg-secondaryC-gray"
+              style={`color: ${social.color};`}
             >
               <Fragment set:html={social.icon} />
               <span class="font-medium text-sm mt-2">{social.label}</span>
@@ -143,8 +149,8 @@ const socialLinks: SocialLink[] = [
             ></path>
           </svg>
           <span class="text-neutralC-white">
-            Dirección: Agustinn Garcia #2069, de la Rosa Av Rivas Guil, Soledad
-            de Graciano, SLP
+            {lang === "es" ? "Dirección" : "Address"}: Agustin Garcia #2069, de
+            la Rosa Av Rivas Guil, Soledad de Graciano, SLP
           </span>
         </div>
       </div>

@@ -1,53 +1,6 @@
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
-
-const reviews = [
-  {
-    name: "Electricidad",
-    username: "@servicios_electricos",
-    body: "Instalaciones eléctricas profesionales, mantenimiento preventivo y correctivo. Especialistas en proyectos residenciales y comerciales.",
-    img: "https://avatar.vercel.sh/electricity",
-  },
-  {
-    name: "Automatización",
-    username: "@smart_automation",
-    body: "Sistemas de automatización industrial y domótica. Optimización de procesos y control inteligente para hogares y empresas.",
-    img: "https://avatar.vercel.sh/automation",
-  },
-  {
-    name: "Robótica",
-    username: "@robotics_solutions",
-    body: "Desarrollo e implementación de soluciones robóticas para industria y educación. Mantenimiento y programación de robots.",
-    img: "https://avatar.vercel.sh/robotics",
-  },
-  {
-    name: "Software",
-    username: "@dev_solutions",
-    body: "Desarrollo de software a medida, aplicaciones web y móviles. Soluciones tecnológicas para optimizar su negocio.",
-    img: "https://avatar.vercel.sh/software",
-  },
-  {
-    name: "Reparaciones",
-    username: "@fix_master",
-    body: "Servicio técnico especializado en reparaciones generales. Atención rápida y eficiente para emergencias.",
-    img: "https://avatar.vercel.sh/repairs",
-  },
-  {
-    name: "Sistemas de Seguridad",
-    username: "@security_systems",
-    body: "Instalación de cámaras de seguridad, alarmas y control de acceso. Protección integral para su hogar o negocio.",
-    img: "https://avatar.vercel.sh/security",
-  },
-  {
-    name: "Reparación de Equipos",
-    username: "@tech_repair",
-    body: "Servicio técnico especializado en computadoras, laptops y dispositivos electrónicos. Diagnóstico y reparación profesional.",
-    img: "https://avatar.vercel.sh/techrepair",
-  },
-];
-
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
+import { getContentJsonLang } from "@/services/langJson";
 
 const ReviewCard = ({
   img,
@@ -87,7 +40,11 @@ const ReviewCard = ({
   );
 };
 
-export function Servicio() {
+export function Servicio({ lang }: { lang: string }) {
+  const { items } = getContentJsonLang("reviews", lang);
+
+  const firstRow = items.slice(0, items.length / 2);
+  const secondRow = items.slice(items.length / 2);
   return (
     <div className="relative flex lg:w-10/12 m-auto h-[400px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
       <Marquee pauseOnHover className="[--duration:20s]">

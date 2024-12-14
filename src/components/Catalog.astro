@@ -1,26 +1,11 @@
 ---
-const catalogItems = [
-  {
-    title: "Courses",
-    description: "Expand your knowledge with our expert-led courses",
-    image: "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/jvgyslcsigvkw6zclfo3.png",
-  },
-  {
-    title: "Products",
-    description: "Discover our range of innovative products",
-    image: "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/yrbqokw6p11dzb25vzp6.png",
-  },
-  {
-    title: "Monitoring",
-    description: "Stay informed with our advanced monitoring solutions",
-    image: "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/dgp0fr9xtpfgwbjlz3aw.png",
-  },
-  {
-    title: "Projects",
-    description: "Explore our successful project implementations",
-    image: "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/sleu7flbtlmemdr7qir1.png",
-  },
-];
+import { getContentJsonLang } from "@/services/langJson";
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const { items } = getContentJsonLang("catalogItems", lang);
 ---
 
 <section class="py-16" id="catalago">
@@ -30,7 +15,7 @@ const catalogItems = [
     </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {
-        catalogItems.map((item, index) => (
+        items.map((item, index) => (
           <div class="group relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-b from-transparent to-primaryC-black opacity-70 transition-opacity duration-300 group-hover:opacity-90" />
             <img
@@ -47,7 +32,7 @@ const catalogItems = [
               </p>
             </div>
             <div class="absolute top-0 right-0 bg-secondaryC-orange text-neutralC-white text-xs font-bold px-3 py-1 m-2 rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-              Explore
+              {index + 1}
             </div>
           </div>
         ))
