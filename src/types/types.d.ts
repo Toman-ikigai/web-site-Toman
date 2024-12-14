@@ -22,6 +22,16 @@ interface ReviewsItem {
   img: string;
 }
 
+interface BenefitsDataItem {
+  title: string;
+  content: string;
+  items: {
+    icon: string;
+    title: string;
+    description: string;
+  }[];
+}
+
 interface ServiceAreaItem extends Pick<SlideItem, "title" | "description"> {
   icon: string;
 }
@@ -78,6 +88,7 @@ interface LangData {
   reviews: {
     items: ReviewsItem[];
   };
+  benefitsData: BenefitsDataItem;
   serviceAreas: {
     items: ServiceAreaItem[];
   };
