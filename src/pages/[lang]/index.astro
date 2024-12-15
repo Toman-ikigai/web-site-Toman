@@ -25,9 +25,24 @@ if (langParam && !validLangs.includes(langParam)) {
   return Astro.redirect(currentUrl.toString());
 }
 const lang = langParam || (navigator.language.startsWith("es") ? "es" : "en");
+
+export async function getStaticPaths() {
+  return [
+    {
+      params: {
+        lang: "es",
+      },
+    },
+    {
+      params: {
+        lang: "en",
+      },
+    },
+  ];
+}
 ---
 
-<Layout title="TOMAN JIDO-KA IKIGAI">
+<Layout title="TOMAN JIDO-KA IKIGAI" lang={lang}>
   <Header lang={lang} />
   <main>
     <Carousel client:load lang={lang} />
