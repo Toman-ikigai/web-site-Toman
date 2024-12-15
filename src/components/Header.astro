@@ -70,8 +70,7 @@ const toggleLang = lang === "es" ? "en" : "es";
 </header>
 
 <script>
-  // El script permanece igual
-  document.addEventListener("DOMContentLoaded", () => {
+  const retrieveActivePage = () => {
     const header = document.getElementById("main-header") as HTMLElement;
     const menuToggle = document.getElementById("menu-toggle") as HTMLElement;
     const menu = document.getElementById("menu") as HTMLElement;
@@ -89,5 +88,8 @@ const toggleLang = lang === "es" ? "en" : "es";
     menuToggle.addEventListener("click", () => {
       menu.classList.toggle("hidden");
     });
-  });
+  };
+
+  document.addEventListener("DOMContentLoaded", retrieveActivePage);
+  document.addEventListener("astro:page-load", retrieveActivePage);
 </script>
