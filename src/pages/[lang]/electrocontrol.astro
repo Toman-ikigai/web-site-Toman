@@ -1,0 +1,28 @@
+---
+import "@/styles/globals.css";
+import LayoutSales from "@/layouts/LayoutSales.astro";
+import Carousel from "@/components/sales/Carousel";
+import Cards from "@/components/sales/Cards.astro";
+import SearchEngine from "@/components/sales/SearchEngine.astro";
+
+export async function getStaticPaths() {
+  return [
+    {
+      params: {
+        lang: "es",
+      },
+    },
+    {
+      params: {
+        lang: "en",
+      },
+    },
+  ];
+}
+---
+
+<LayoutSales title="Electrical Sales">
+  <Carousel client:load />
+  <SearchEngine />
+  <Cards />
+</LayoutSales>

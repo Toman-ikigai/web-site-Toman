@@ -106,6 +106,42 @@
         "username": "@tech_repair",
         "body": "Servicio técnico especializado en computadoras, laptops y dispositivos electrónicos. Diagnóstico y reparación profesional.",
         "img": "https://avatar.vercel.sh/techrepair"
+      },
+      {
+        "name": "Diseño de Circuitos",
+        "username": "@circuit_design",
+        "body": "Diseño y montaje de circuitos electrónicos. Prototipado y pruebas de funcionamiento para proyectos de electrónica.",
+        "img": "https://avatar.vercel.sh/circuitdesign"
+      },
+      {
+        "name": "Industria 4.0",
+        "username": "@industry_4.0",
+        "body": "Implementación de tecnologías de la industria 4.0. Soluciones de automatización y digitalización para empresas.",
+        "img": "https://avatar.vercel.sh/industry4.0"
+      },
+      {
+        "name": "Programcion de Plcs",
+        "username": "@plc_programming",
+        "body": "Programación de controladores lógicos programables para automatización industrial. Configuración y puesta en marcha de sistemas PLC.",
+        "img": "https://avatar.vercel.sh/plcprogramming"
+      },
+      {
+        "name": "Armado de Gabinetes",
+        "username": "@cabinet_assembly",
+        "body": "Fabricación y montaje de gabinetes eléctricos y tableros de control. Diseño personalizado y ensamblaje de componentes.",
+        "img": "https://avatar.vercel.sh/cabinetassembly"
+      },
+      {
+        "name": "Venta de Materiales",
+        "username": "@material_sales",
+        "body": "Venta de materiales eléctricos y componentes electrónicos. Amplio catálogo de productos para instalaciones y reparaciones.",
+        "img": "https://avatar.vercel.sh/materialsales"
+      },
+      {
+        "name": "Venta de Equipo de Control",
+        "username": "@control_equipment",
+        "body": "Venta de equipos de control industrial y automatización. Amplia gama de dispositivos y accesorios para proyectos.",
+        "img": "https://avatar.vercel.sh/controlequipment"
       }
     ]
   },
@@ -153,8 +189,8 @@
         "icon": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733959724/imagens/servicios/ovp9gbtkoyxozkynaixb.png"
       },
       {
-        "title": "TRABAJO EN METAL",
-        "description": "Fabricación personalizada y trabajos especializados en estructuras metálicas",
+        "title": "ESTRUCTURAS",
+        "description": "Diseño y fabricación personalizada y trabajos especializados en estructuras metálicas",
         "icon": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733959724/imagens/servicios/vqp0m2pxkinmuqb14n04.png"
       },
       {
@@ -167,24 +203,29 @@
   "catalogItems": {
     "items": [
       {
-        "title": "Cursos",
-        "description": "Descubre nuestra gama de cursos innovadores",
+        "title": "Presentacion",
+        "description": "Conoce nuestra empresa y los servicios que ofrecemos",
         "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/jvgyslcsigvkw6zclfo3.png"
       },
       {
         "title": "Productos",
         "description": "Explora nuestra amplia gama de productos",
+        "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/sleu7flbtlmemdr7qir1.png"
+      },
+      {
+        "title": "Sistema MES",
+        "description": "Conoce nuestro sistema de ejecución de fabricación",
         "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/yrbqokw6p11dzb25vzp6.png"
       },
       {
         "title": "Monitoreo",
         "description": "Conoce nuestra tecnología de monitoreo",
-        "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/dgp0fr9xtpfgwbjlz3aw.png"
+        "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/rw0ybamxrxc1mndt0ucy.png"
       },
       {
-        "title": "Proyectos",
-        "description": "Descubre nuestros proyectos innovadores",
-        "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/sleu7flbtlmemdr7qir1.png"
+        "title": "Cursos",
+        "description": "Descubre nuestros cursos y talleres",
+        "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/dgp0fr9xtpfgwbjlz3aw.png"
       }
     ]
   },

@@ -106,6 +106,42 @@
         "username": "@tech_repair",
         "body": "Technical service specialized in computers, laptops, and electronic devices. Professional diagnosis and repair.",
         "img": "https://avatar.vercel.sh/techrepair"
+      },
+      {
+        "name": "Circuit Design",
+        "username": "@circuit_design",
+        "body": "Design and assembly of electronic circuits. Prototyping and functional testing for electronic projects.",
+        "img": "https://avatar.vercel.sh/circuitdesign"
+      },
+      {
+        "name": "Industry 4.0",
+        "username": "@industry_4.0",
+        "body": "Implementation of Industry 4.0 technologies. Automation and digitalization solutions for companies.",
+        "img": "https://avatar.vercel.sh/industry4.0"
+      },
+      {
+        "name": "PLC programming",
+        "username": "@plc_programming",
+        "body": "Programming of programmable logic controllers for industrial automation. Configuration and commissioning of PLC systems.",
+        "img": "https://avatar.vercel.sh/plcprogramming"
+      },
+      {
+        "name": "Cabinet Assembly",
+        "username": "@cabinet_assembly",
+        "body": "Manufacturing and assembly of electrical cabinets and control panels. Custom design and assembly of components.",
+        "img": "https://avatar.vercel.sh/cabinetassembly"
+      },
+      {
+        "name": "Sale of Materials",
+        "username": "@material_sales",
+        "body": "Sale of electrical materials and electronic components. Extensive catalogue of products for installations and repairs.",
+        "img": "https://avatar.vercel.sh/materialsales"
+      },
+      {
+        "name": "Sale of Control Equipment",
+        "username": "@control_equipment",
+        "body": "Sale of industrial control and automation equipment. Wide range of devices and accessories for projects.",
+        "img": "https://avatar.vercel.sh/controlequipment"
       }
     ]
   },
@@ -153,8 +189,8 @@
         "icon": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733959724/imagens/servicios/ovp9gbtkoyxozkynaixb.png"
       },
       {
-        "title": "METALWORKING",
-        "description": "Custom manufacturing and specialized work in metal structures",
+        "title": "STRUCTURES",
+        "description": "Custom design and manufacturing and specialized work in metal structures.",
         "icon": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733959724/imagens/servicios/vqp0m2pxkinmuqb14n04.png"
       },
       {
@@ -167,24 +203,29 @@
   "catalogItems": {
     "items": [
       {
-        "title": "Courses",
-        "description": "Discover our range of innovative courses",
+        "title": "Presentation",
+        "description": "Get to know our company and the services we offer",
         "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/jvgyslcsigvkw6zclfo3.png"
       },
       {
         "title": "Products",
         "description": "Explore our wide range of products",
+        "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/sleu7flbtlmemdr7qir1.png"
+      },
+      {
+        "title": "MES system",
+        "description": "Get to know our manufacturing execution system",
         "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/yrbqokw6p11dzb25vzp6.png"
       },
       {
         "title": "Monitoring",
-        "description": "Learn about our monitoring technology",
-        "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/dgp0fr9xtpfgwbjlz3aw.png"
+        "description": "Get to know our monitoring technology",
+        "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/rw0ybamxrxc1mndt0ucy.png"
       },
       {
-        "title": "Projects",
-        "description": "Discover our innovative projects",
-        "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/sleu7flbtlmemdr7qir1.png"
+        "title": "Courses",
+        "description": "Discover our courses and workshops",
+        "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/dgp0fr9xtpfgwbjlz3aw.png"
       }
     ]
   },

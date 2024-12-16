@@ -11,7 +11,7 @@ export default {
       },
       colors: {
         primaryC: {
-          yellow: "#FFD966",
+          yellow: "#ffff00",
           black: "#2C2C2C",
         },
         secondaryC: {
