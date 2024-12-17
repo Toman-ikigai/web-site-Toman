@@ -7,26 +7,26 @@ const products = [
 ];
 ---
 
-<div class="bg-[#2C2C2C] py-8">
+<div class="bg-neutralC-black py-8">
   <div class="container mx-auto">
-    <h2 class="text-3xl font-bold text-[#FFD966] mb-6">Featured Products</h2>
+    <h2 class="text-3xl font-bold text-primaryC-yellow mb-6">Featured Products</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {
         products.map((product) => (
-          <div class="bg-[#E0E0E0] rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105">
+          <div class="bg-[#1E1E1E] rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105">
             <img
               src={product.image}
               alt={product.name}
               class="w-full h-48 object-cover"
             />
             <div class="p-4">
-              <h3 class="text-[#2C2C2C] font-semibold text-lg mb-2">
+              <h3 class="text-white font-semibold text-lg mb-2">
                 {product.name}
               </h3>
-              <p class="text-[#FFA500] font-bold">
+              <p class="text-primaryC-yellow font-bold">
                 ${product.price.toFixed(2)}
               </p>
-              <button class="mt-4 bg-[#FFD966] text-[#2C2C2C] px-4 py-2 rounded hover:bg-[#FFA500] transition-colors">
+              <button class="mt-4 bg-primaryC-yellow text-black px-4 py-2 rounded hover:bg-[#FFA500] transition-colors">
                 Add to Cart
               </button>
             </div>

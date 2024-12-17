@@ -15,11 +15,13 @@ const toggleLang = lang === "es" ? "en" : "es";
   class="bg-transparent text-white p-4 lg:p-2 fixed w-full z-20 shadow-md transition-colors duration-300"
 >
   <div class="container mx-auto flex justify-between items-center">
-    <img
-      src="./logo.png"
-      alt="Company Logo"
-      class="w-36 lg:w-40 h-auto object-contain rounded-lg"
-    />
+    <a href="/">
+      <img
+        src="./logo.png"
+        alt="Company Logo"
+        class="w-36 lg:w-40 h-auto object-contain rounded-lg"
+      />
+    </a>
     <button
       id="menu-toggle"
       class="lg:hidden text-white focus:outline-none focus:ring-2 focus:ring-secondaryC-orange transition transform hover:scale-110"
@@ -48,7 +50,7 @@ const toggleLang = lang === "es" ? "en" : "es";
           langData.items.map((item) => (
             <li>
               <a
-                href={`#${item.url}`}
+                href={`${item.url.includes("electrocontrol") ? `/${toggleLang}/electrocontrol` : `#${item.url}`}`}
                 class="block py-2 px-4 hover:text-secondaryC-orange transition-colors"
               >
                 {item.name}

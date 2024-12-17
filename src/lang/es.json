@@ -16,6 +16,10 @@
       {
         "name": "CONTACTO",
         "url": "contacto"
+      },
+      {
+        "name": "VENTAS",
+        "url": "electrocontrol"
       }
     ]
   },

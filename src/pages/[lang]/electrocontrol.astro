@@ -5,6 +5,16 @@ import Carousel from "@/components/sales/Carousel";
 import Cards from "@/components/sales/Cards.astro";
 import SearchEngine from "@/components/sales/SearchEngine.astro";
 
+const langParam = Astro.params.lang;
+const validLangs = ["es", "en"];
+if (langParam && !validLangs.includes(langParam)) {
+  const lang = navigator.language.startsWith("es") ? "es" : "en";
+  const currentUrl = new URL(Astro.request.url);
+  currentUrl.pathname = `/${lang}`;
+  return Astro.redirect(currentUrl.toString());
+}
+const lang = langParam || (navigator.language.startsWith("es") ? "es" : "en");
+
 export async function getStaticPaths() {
   return [
     {
@@ -21,7 +31,7 @@ export async function getStaticPaths() {
 }
 ---
 
-<LayoutSales title="Electrical Sales">
+<LayoutSales title="Electrical Sales" lang={lang}>
   <Carousel client:load />
   <SearchEngine />
   <Cards />

@@ -16,6 +16,10 @@
       {
         "name": "CONTACT",
         "url": "contacto"
+      },
+      {
+        "name": "SALES",
+        "url": "electrocontrol"
       }
     ]
   },

@@ -31,10 +31,15 @@ export default function Carousel({ lang }: { lang: string }) {
           <dt className="absolute h-full w-full bg-black bg-opacity-50 flex gap-3 flex-col justify-center md:items-start items-center text-white p-4 top-0 left-0">
             <h2 className="text-2xl text-center font-din">{slide.title}</h2>
 
-            <h2 className="md:text-4xl text-xl font-bold text-center">
+            <div className="flex flex-wrap md:flex-nowrap justify-center md:gap-4 gap-2 overflow-hidden md:text-4xl text-xl font-bold">
+              {slide.subtitle.split(" ").map((word) => (
+                <GradualSpacingDemo text={word} />
+              ))}
+            </div>
+            {/* <h2 className="md:text-4xl text-xl font-bold text-center">
               <GradualSpacingDemo text={slide.subtitle} />
-              {/* {slide.title} */}
-            </h2>
+
+            </h2> */}
 
             <div className="lg:w-5/12 md:text-2xl lg:text-xl w-10/12 flex flex-wrap font-bergsland">
               {slide.description}
