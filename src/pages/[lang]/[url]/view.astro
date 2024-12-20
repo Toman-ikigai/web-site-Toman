@@ -66,18 +66,17 @@ const urlPdf = `https://res.cloudinary.com/dvggwdqnj/image/upload/v1734647242/ca
   src="https://unpkg.com/pdfjs-dist@4.0.379/build/pdf.min.mjs"
   type="module"></script>
 <script type="module">
-  const { pdfjsLib } = globalThis;
-  const WORKER_PATH =
-    "https://unpkg.com/pdfjs-dist@4.0.379/build/pdf.worker.min.mjs";
-  pdfjsLib.GlobalWorkerOptions.workerSrc = WORKER_PATH;
-
-  const urlFile = document.getElementById("urlFile").value;
-  const loader = document.getElementById("loader");
-  const pdfContainer = document.getElementById("pdfContainer");
-
-  const PDF_PATH = urlFile;
-
   async function loadPDF() {
+    const { pdfjsLib } = globalThis;
+    const WORKER_PATH =
+      "https://unpkg.com/pdfjs-dist@4.0.379/build/pdf.worker.min.mjs";
+    pdfjsLib.GlobalWorkerOptions.workerSrc = WORKER_PATH;
+
+    const urlFile = document.getElementById("urlFile").value;
+    const loader = document.getElementById("loader");
+    const pdfContainer = document.getElementById("pdfContainer");
+
+    const PDF_PATH = urlFile;
     try {
       const pdf = await pdfjsLib.getDocument(PDF_PATH).promise;
       pdfContainer.innerHTML = "";
@@ -109,5 +108,5 @@ const urlPdf = `https://res.cloudinary.com/dvggwdqnj/image/upload/v1734647242/ca
     }
   }
 
-  loadPDF();
+  document.addEventListener("astro:page-load", loadPDF);
 </script>
