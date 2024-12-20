@@ -209,27 +209,32 @@
       {
         "title": "Presentation",
         "description": "Get to know our company and the services we offer",
-        "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/jvgyslcsigvkw6zclfo3.png"
+        "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/jvgyslcsigvkw6zclfo3.png",
+        "url_pdf": "rlqpe7mjrtz5qmxcqan3"
       },
       {
         "title": "Products",
         "description": "Explore our wide range of products",
-        "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/sleu7flbtlmemdr7qir1.png"
+        "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/sleu7flbtlmemdr7qir1.png",
+        "url_pdf": "hizppmcqr7owwj3htkje"
       },
       {
         "title": "MES system",
         "description": "Get to know our manufacturing execution system",
-        "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/yrbqokw6p11dzb25vzp6.png"
+        "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/yrbqokw6p11dzb25vzp6.png",
+        "url_pdf": "hxynm2uchpbctaxjve2e"
       },
       {
         "title": "Monitoring",
         "description": "Get to know our monitoring technology",
-        "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/rw0ybamxrxc1mndt0ucy.png"
+        "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/rw0ybamxrxc1mndt0ucy.png",
+        "url_pdf": "hqse65lxwb2jz95caufl"
       },
       {
         "title": "Courses",
         "description": "Discover our courses and workshops",
-        "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/dgp0fr9xtpfgwbjlz3aw.png"
+        "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1733957153/imagens/dgp0fr9xtpfgwbjlz3aw.png",
+        "url_pdf": ""
       }
     ]
   },

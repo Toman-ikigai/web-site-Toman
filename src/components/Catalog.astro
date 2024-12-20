@@ -30,6 +30,12 @@ const { items } = getContentJsonLang("catalogItems", lang);
               <p class="text-neutralC-white text-sm opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 {item.description}
               </p>
+              <a
+                href={`/${lang}/${item.url_pdf}/view`}
+                class="mt-4 inline-block bg-primaryC-yellow text-neutralC-black text-sm font-bold px-4 py-2 rounded-full transition-transform duration-300 hover:scale-105"
+              >
+                Ver más
+              </a>
             </div>
             <div class="absolute top-0 right-0 bg-secondaryC-orange text-neutralC-white text-xs font-bold px-3 py-1 m-2 rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               {index + 1}

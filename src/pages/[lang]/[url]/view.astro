@@ -1,0 +1,106 @@
+---
+import "@/styles/globals.css";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import { getContentJsonLang } from "@/services/langJson";
+
+const langParam = Astro.params.lang;
+const urlFile = Astro.params.url;
+
+const validLangs = ["es", "en"];
+if (langParam && !validLangs.includes(langParam)) {
+  const lang = navigator.language.startsWith("es") ? "es" : "en";
+  const currentUrl = new URL(Astro.request.url);
+  currentUrl.pathname = `/${lang}`;
+  return Astro.redirect(currentUrl.toString());
+}
+const lang = langParam || (navigator.language.startsWith("es") ? "es" : "en");
+
+const { items } = getContentJsonLang("catalogItems", lang);
+
+interface Pages {
+  params: {
+    lang: string;
+    url: string;
+  };
+}
+
+export async function getStaticPaths() {
+  const newItem: Pages[] = items.map((item) => ({
+    params: { lang, url: item.url_pdf },
+  }));
+  return newItem;
+  // return [
+  //   {
+  //     params: {
+  //       lang: "es",
+  //     },
+  //   },
+  //   {
+  //     params: {
+  //       lang: "en",
+  //     },
+  //   },
+  // ];
+}
+
+const urlPdf = `https://res.cloudinary.com/dvggwdqnj/image/upload/v1734647242/catalagos/${urlFile}.pdf`;
+---
+
+<Layout title="TOMAN JIDO-KA IKIGAI" lang={lang}>
+  <Header lang={lang} />
+  <section
+    class="flex flex-col items-center justify-center min-h-screen p-4 mx-auto"
+  >
+    <input type="hidden" id="urlFile" value={urlPdf} readonly />
+    <div
+      id="pdfContainer"
+      class="flex flex-col gap-5 bg-white p-4 rounded-lg shadow-lg mt-24"
+    >
+    </div>
+  </section>
+</Layout>
+
+<script
+  src="https://unpkg.com/pdfjs-dist@4.0.379/build/pdf.min.mjs"
+  type="module"></script>
+<script type="module">
+  const { pdfjsLib } = globalThis;
+  const WORKER_PATH =
+    "https://unpkg.com/pdfjs-dist@4.0.379/build/pdf.worker.min.mjs";
+  pdfjsLib.GlobalWorkerOptions.workerSrc = WORKER_PATH;
+
+  const urlFile = document.getElementById("urlFile").value;
+
+  const PDF_PATH = urlFile;
+
+  async function loadPDF() {
+    const pdf = await pdfjsLib.getDocument(PDF_PATH).promise;
+    const container = document.getElementById("pdfContainer");
+    container.innerHTML = "";
+
+    for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+      const page = await pdf.getPage(pageNum);
+      let scale;
+      if (window.innerWidth < 768) {
+        scale = 0.5;
+      } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+        scale = 0.5; // Tablet mode
+      } else {
+        scale = 0.8;
+      }
+      const viewport = page.getViewport({ scale });
+
+      const canvas = document.createElement("canvas");
+      canvas.height = viewport.height;
+      canvas.width = viewport.width;
+
+      const context = canvas.getContext("2d");
+      await page.render({ canvasContext: context, viewport }).promise;
+
+      container.appendChild(canvas);
+    }
+  }
+
+  loadPDF();
+</script>

@@ -37,7 +37,9 @@ interface ServiceAreaItem extends Pick<SlideItem, "title" | "description"> {
 }
 
 interface CatalogItem
-  extends Pick<SlideItem, "title" | "description" | "image"> {}
+  extends Pick<SlideItem, "title" | "description" | "image"> {
+  url_pdf: string;
+}
 
 interface ProjectsItem
   extends Pick<SlideItem, "title" | "description" | "image"> {}
