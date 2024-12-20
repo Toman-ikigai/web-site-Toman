@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useId } from "react";
 import { GradualSpacingDemo } from "./GradualSpacingDemo";
 import { getContentJsonLang } from "@/services/langJson";
 
 export default function Carousel({ lang }: { lang: string }) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = getContentJsonLang("slideData", lang);
+  const slides = getContentJsonLang("slideData", lang);  
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -18,7 +18,7 @@ export default function Carousel({ lang }: { lang: string }) {
     <div id="home" className="relative w-full lg:h-[90vh] md:h-[60vh] h-[85vh]">
       {slides.items.map((slide, index) => (
         <div
-          key={index}
+          key={useId()}
           className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
