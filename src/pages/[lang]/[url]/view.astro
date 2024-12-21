@@ -83,13 +83,17 @@ const urlPdf = `https://res.cloudinary.com/dvggwdqnj/image/upload/v1734647242/ca
 
       for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
         const page = await pdf.getPage(pageNum);
+        const viewportA = page.getViewport({ scale: 1 });
+        const width = viewportA.width;
+        const height = viewportA.height;
         let scale;
+        const isWide = width > height;
         if (window.innerWidth < 768) {
-          scale = 0.2;
+          scale = isWide ? 0.2 : 0.55;
         } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
-          scale = 0.5;
+          scale = isWide ? 0.5 : 1;
         } else {
-          scale = 0.8;
+          scale = isWide ? 0.8 : 1.5;
         }
         const viewport = page.getViewport({ scale });
 
@@ -98,6 +102,8 @@ const urlPdf = `https://res.cloudinary.com/dvggwdqnj/image/upload/v1734647242/ca
         canvas.width = viewport.width;
 
         const context = canvas.getContext("2d");
+        // context.rotate(Math.PI / 2);
+        // context.translate(0, -canvas.width);
         await page.render({ canvasContext: context, viewport }).promise;
 
         pdfContainer.appendChild(canvas);
