@@ -218,10 +218,14 @@ const urlPdf = `https://res.cloudinary.com/dvggwdqnj/image/upload/v1734647242/ca
 </script>
 
 <style>
+  .pdf-container {
+    touch-action: none; /* Control de zoom solo aquí */
+  }
   .pdf-wrapper {
-    touch-action: none; /* Previene el zoom del navegador */
     position: relative;
     scrollbar-width: none;
+    touch-action: pan-x pan-y; /* Permite scroll vertical y horizontal */
+    -webkit-overflow-scrolling: touch; /* Mejora el scroll en iOS */
   }
 
   .pdf-container {
