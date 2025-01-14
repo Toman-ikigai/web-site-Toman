@@ -24,7 +24,7 @@ const { items, title, content } = getContentJsonLang("benefitsData", lang);
   <div class="grid md:grid-cols-3 gap-6">
     {
       items.map((benefit) => (
-        <div class="p-6 rounded-lg transition-transform transform hover:scale-105 border-2 border-[#ffff00] bg-[#4B4B4B]">
+        <div class="p-6 rounded-lg transition-transform transform hover:scale-105 border-[0.1px] bg-[#4B4B4B]">
           <div class="flex items-center mb-4">
             <Fragment set:html={benefit.icon} />
             <h3 class="ml-4 text-xl font-bold text-[#ffff00]">

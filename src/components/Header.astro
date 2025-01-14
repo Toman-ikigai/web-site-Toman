@@ -8,6 +8,7 @@ interface Props {
 const { lang } = Astro.props;
 const langData = getContentJsonLang("header", lang);
 const toggleLang = lang === "es" ? "en" : "es";
+const url = Astro.url.pathname.includes("electrocontrol");
 ---
 
 <header
@@ -50,7 +51,7 @@ const toggleLang = lang === "es" ? "en" : "es";
           langData.items.map((item) => (
             <li>
               <a
-                href={`${item.url.includes("electrocontrol") ? `/${toggleLang}/electrocontrol` : `#${item.url}`}`}
+                href={`${item.url.includes("electrocontrol") ? `/${toggleLang}/electrocontrol` : `${url ? "/" : ""}#${item.url}`}`}
                 class="block py-2 px-4 hover:text-secondaryC-orange transition-colors"
               >
                 {item.name}

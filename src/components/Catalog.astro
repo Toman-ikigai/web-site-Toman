@@ -16,7 +16,7 @@ const { items } = getContentJsonLang("catalogItems", lang);
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {
         items.map((item, index) => (
-          <div class="group relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
+            <div class="group relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-b from-transparent to-primaryC-black opacity-70 transition-opacity duration-300 group-hover:opacity-90" />
             <img
               src={item.image}
@@ -25,24 +25,24 @@ const { items } = getContentJsonLang("catalogItems", lang);
             />
             <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 transition-transform duration-300 group-hover:translate-y-0">
               <h3 class="text-2xl font-semibold text-primaryC-yellow mb-2">
-                {item.title}
+              {item.title}
               </h3>
               <p class="text-neutralC-white text-sm opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                {item.description}
+              {item.description}
               </p>
               {item.url_pdf.trim() && (
-                <a
-                  href={`/${lang}/${item.url_pdf}/view`}
-                  class="mt-4 inline-block bg-primaryC-yellow text-neutralC-black text-sm font-bold px-4 py-2 rounded-full transition-transform duration-300 hover:scale-105"
-                >
-                  Ver más
-                </a>
+              <a
+                href={`/${lang}/${item.url_pdf}/view`}
+                class="mt-4 inline-block bg-[#4CAF50] text-white text-sm font-bold px-4 py-2 rounded-full transition-transform duration-300 hover:scale-105 hover:bg-[#45a049]"
+              >
+                Ver más
+              </a>
               )}
             </div>
-            <div class="absolute top-0 right-0 bg-secondaryC-orange text-neutralC-white text-xs font-bold px-3 py-1 m-2 rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <div class="absolute top-0 right-0 bg-[#4CAF50] text-white text-xs font-bold px-3 py-1 m-2 rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               {index + 1}
             </div>
-          </div>
+            </div>
         ))
       }
     </div>
