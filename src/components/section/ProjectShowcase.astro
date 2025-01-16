@@ -11,11 +11,11 @@ const { items } = getContentJsonLang("projects", lang);
 
 <div class="p-6 flex flex-col items-center justify-center">
   <h2 class="text-3xl font-bold mb-8 text-center text-[#ffff00]">
-    {lang === "es" ? "Nuestros Proyectos" : "Our Projects"}
+    {lang === "es" ? "Proyectos" : "Projects"}
   </h2>
 
   <div
-    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl"
+    class="flex flex-col gap-6 w-full max-w-6xl"
   >
     {
       items.map((project) => (
