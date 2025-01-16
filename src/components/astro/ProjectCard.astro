@@ -8,48 +8,35 @@ const { title, image, description } = Astro.props;
 ---
 
 <div
-  class="relative w-full max-w-sm mx-auto transform transition-all duration-300 hover:scale-105 hover:shadow-lg rounded-xl overflow-hidden bg-primaryC-black shadow-md"
+  class="relative w-full mx-auto transform transition-all duration-300 hover:scale-105 hover:shadow-lg rounded-xl overflow-hidden bg-primaryC-black shadow-md grid grid-cols-4 card__project"
 >
   {/* Image Section */}
-  <div class="relative w-full h-48 overflow-hidden bg-primaryC-yellow">
+  <div
+    class="relative w-full h-48 overflow-hidden bg-primaryC-yellow col-span-3"
+  >
     <img
       src={image || "/api/placeholder/400/250"}
       alt={title}
-      class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 hover:brightness-90 img__project"
+      class="w-full h-full object-cover transition-transform duration-300 hover:scale-110 hover:brightness-90 img__project group-hover:blur-md"
     />
 
     {/* Hover Overlay */}
     <div
-      class="absolute inset-0 flex items-center justify-center bg-primaryC-black bg-opacity-70 transition-opacity duration-300 div_overlap"
+      class="absolute inset-0 flex items-center justify-center bg-black transition-opacity duration-300 break-words p-5 div_overlap"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        width="48"
-        height="48"
-        stroke-width="2"
-        class="opacity-80 hover:opacity-100 cursor-pointer text-primaryC-yellow"
-      >
-        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
-        <path
-          d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"
-        ></path>
-      </svg>
+      <p class="text-xl line-clamp-3 text-neutralC-white text-center font-semibold text-shadow">
+        {description}
+      </p>
     </div>
   </div>
 
   {/* Content Section */}
-  <div class="p-4 text-neutralC-white bg-primaryC-black">
-    <h3 class="text-xl font-bold mb-2 break-words text-[#ffff00]">
+  <div
+    class="p-4 text-neutralC-white bg-primaryC-yellow text-center flex justify-center items-center"
+  >
+    <h3 class="text-2xl font-bold mb-2 break-words text-black">
       {title}
     </h3>
-    <p class="text-sm line-clamp-3 text-secondaryC-gray">
-      {description}
-    </p>
   </div>
 </div>
 
@@ -58,7 +45,15 @@ const { title, image, description } = Astro.props;
     opacity: 0;
   }
 
-  .img__project:hover ~ .div_overlap {
-    opacity: 1;
+  .card__project:hover .div_overlap {
+    opacity: 0.5;
+  }
+
+  .card__project:hover .img__project {
+    filter: blur(3px);
+  }
+
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   }
 </style>
