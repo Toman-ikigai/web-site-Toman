@@ -154,31 +154,31 @@
     "content": "A comprehensive and dynamic system that monitors, tracks, documents and controls the manufacturing process from raw materials to finished products.",
     "items": [
       {
-        "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' width='48' height='48' stroke-width='2' class='border-secondaryC-orange'> <path d='M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06'></path> <path d='M15 19l2 2l4 -4'></path> </svg>",
+        "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='yellow' stroke-linecap='round' stroke-linejoin='round' width='48' height='48' stroke-width='2' class='border-secondaryC-orange'> <path d='M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06'></path> <path d='M15 19l2 2l4 -4'></path> </svg>",
         "title": "Better Quality Control",
         "description": "Quality control information is transmitted in real-time, allowing companies to stop production immediately upon identifying a problem. This reduces waste, leftovers, excess, and duplicated work.",
         "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1737058618/imagens/qvks9zcuvllrwlnyi7uz.png"
       },
       {
-        "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' width='48' height='48' stroke-width='2' class='border-secondaryC-orange'>  <path d='M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0'></path> <path d='M12 12l3 2'></path>  <path d='M12 7v5'></path></svg>",
+        "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='yellow' stroke-linecap='round' stroke-linejoin='round' width='48' height='48' stroke-width='2' class='border-secondaryC-orange'>  <path d='M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0'></path> <path d='M12 12l3 2'></path>  <path d='M12 7v5'></path></svg>",
         "title": "More Operating Time",
         "description": "Generates realistic production schedules by balancing material, human, and equipment resources. Integrates schedules and maintenance to maximize product flow and overall equipment effectiveness (OEE).",
         "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1737058617/imagens/vhw0bdhecr01he5obpf0.png"
       },
       {
-        "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' width='48' height='48' stroke-width='2' class='border-secondaryC-orange'>  <path d='M6 18l0 -3'></path> <path d='M10 18l0 -6'></path> <path d='M14 18l0 -9'></path>  <path d='M18 18l0 .01'></path></svg>",
+        "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='yellow' stroke-linecap='round' stroke-linejoin='round' width='48' height='48' stroke-width='2' class='border-secondaryC-orange'>  <path d='M6 18l0 -3'></path> <path d='M10 18l0 -6'></path> <path d='M14 18l0 -9'></path>  <path d='M18 18l0 .01'></path></svg>",
         "title": "Reduced Inventory",
         "description": "Updates material records for production, waste, and compliance. Allows purchasing, logistics, and scheduling departments to know exactly what material is available, reducing unnecessary inventory and saving costs.",
         "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1737058618/imagens/mbb4tcxz5xrsfeki9zwe.png"
       },
       {
-        "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' width='48' height='48' stroke-width='2' class='border-secondaryC-orange'>  <path d='M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2'></path>  <path d='M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4'></path>  <path d='M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z'></path></svg>",
+        "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='yellow' stroke-linecap='round' stroke-linejoin='round' width='48' height='48' stroke-width='2' class='border-secondaryC-orange'>  <path d='M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2'></path>  <path d='M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4'></path>  <path d='M7 13m0 2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2z'></path></svg>",
         "title": "Paperless Plant",
         "description": "Eliminates paperwork, reducing opportunities for human error. Recorded data is immediately available across all integrated systems, allowing for real-time decision-making.",
         "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1737058617/imagens/nj3yhpxwmsgvij5nt1pl.png"
       },
       {
-        "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' width='48' height='48' stroke-width='2'>  <path d='M8 4m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z'></path>  <path d='M16 16v2a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-8a2 2 0 0 1 2 -2h2'></path></svg>",
+        "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='yellow' stroke-linecap='round' stroke-linejoin='round' width='48' height='48' stroke-width='2'>  <path d='M8 4m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z'></path>  <path d='M16 16v2a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-8a2 2 0 0 1 2 -2h2'></path></svg>",
         "title": "Better Genealogy and Tracking",
         "description": "Tracks the entire production cycle from start to finish, grouping parts or final batches with their manufacturing data. Improves regulatory compliance for manufacturers.",
         "image": "https://res.cloudinary.com/dvggwdqnj/image/upload/v1737058618/imagens/evznuzl5v6xjmehb7ccw.png"
