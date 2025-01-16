@@ -26,12 +26,12 @@ const { items, title, content } = getContentJsonLang("benefitsData", lang);
       items.map((benefit) => (
         <div
           class="p-6 rounded-lg shadow-md transition-all hover:shadow-2xl hover:scale-105 border border-neutral-700 relative h-60 bg-cover bg-center"
-          style={`background-image: url(${benefit.image});`}
+          style={`background-image: url(${benefit.image}); background-size: 120%;`}
         >
           <div class="absolute z-10 p-2">
             <div class="flex items-center mb-4">
               <Fragment set:html={benefit.icon} />
-              <h3 class="ml-4 text-xl font-bold text-[#ffff00]">
+              <h3 class="ml-4 text-xl font-bold text-white">
                 {benefit.title}
               </h3>
             </div>
